@@ -1,15 +1,17 @@
-import express, { Application, Request, Response } from 'express'
-import cors from 'cors'
-const app: Application = express()
+import cors from 'cors';
+import express, { Application, Request, Response } from 'express';
 
-// parsers
-app.use(express.json())
-app.use(cors)
-app.get('/', (req: Request, res: Response) => {
-  const a = 10
+const app: Application = express();
 
-  res.send(a)
+//parsers
+app.use(express.json());
+app.use(cors());
+
+// application routes
+
+
+app.get('/', (req: Request, res: Response)=>{
+  res.send('hello rubel developer')
 })
 
-export default app
-// console.log(process.cwd())
+export default app;
